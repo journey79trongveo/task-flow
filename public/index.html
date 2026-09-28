@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TaskFlow</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <h1>TaskFlow</h1>
+    <form id="new-task" class="new-task">
+      <input name="title" placeholder="New task title" required maxlength="200">
+      <select name="priority">
+        <option>High</option>
+        <option selected>Medium</option>
+        <option>Low</option>
+      </select>
+      <input name="assignee" placeholder="Assignee">
+      <input name="storyPoints" type="number" min="0" placeholder="SP">
+      <input name="jiraKey" placeholder="TF-1">
+      <button type="submit">Add</button>
+    </form>
+  </header>
+  <p id="error" class="error" role="alert" hidden></p>
+  <main id="board" class="board"></main>
+  <script src="app.js" type="module"></script>
+</body>
+</html>
